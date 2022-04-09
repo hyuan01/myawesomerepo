@@ -46,6 +46,17 @@ def extend(request):
     chrome_options = ChromeOptions()
     chrome_options.add_extension('test_src.crx')
 
+    options = [
+    "--headless",
+    "--disable-gpu",
+    "--window-size=1920,1200",
+    "--ignore-certificate-errors",
+    "--no-sandbox",
+    "--disable-dev-shm-usage"
+]
+    for option in options:
+        chrome_options.add_argument(option)
+
     request.cls.driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 
 

@@ -8,7 +8,7 @@ from webdriver_manager.utils import ChromeType
 
 
 @pytest.fixture()
-def chromeExtension(request):
+def extend(request):
     chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.GOOGLE).install())
 
     chrome_options = ChromeOptions()

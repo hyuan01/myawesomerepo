@@ -1,5 +1,5 @@
 def inc():
-    return False
+    return True
 
 
 def test_answer():

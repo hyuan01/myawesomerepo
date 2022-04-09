@@ -1,7 +1,7 @@
 import pytest
 
 
-@pytest.mark.usefixtures("setup")
+@pytest.mark.usefixtures("chromeExtension")
 class TestExampleOne:
     def test_title(self):
         self.driver.get('https://www.delrayo.tech')
